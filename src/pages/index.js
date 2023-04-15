@@ -1,6 +1,7 @@
-import TopJobs from "@/components/TopJobs";
-import CategoryRow from "@/components/CategoryRow";
 import MetaHead from "@/components/ui/MetaHead";
+import CategoryRow from "@/components/CategoryRow";
+import TopJobs from "@/components/TopJobs";
+import LastChanceJobs from "@/components/LastChanceJobs";
 
 export default function Home() {
   return (
@@ -9,11 +10,14 @@ export default function Home() {
         page="Home"
         description="Discover your dream job with JobSeeking.today, the premier job search platform connecting you to top employers and exciting opportunities in your industry. Start your career journey now!"
       />
-      <div className="mx-auto max-w-3xl">
+      <div className="mx-auto max-w-6xl">
+        <CategoryRow />
+      </div>
+      <div className="mx-auto max-w-3xl my-6 sm:my-0">
         <TopJobs />
       </div>
-      <div className="mx-auto max-w-5xl mt-10">
-        <CategoryRow />
+      <div className="mx-auto max-w-3xl my-6 sm:my-0">
+        <LastChanceJobs />
       </div>
     </>
   );
