@@ -33,7 +33,7 @@ const positions = [
 export default function TopJobs() {
   return (
     <div className="overflow-hidden bg-white sm:rounded-md">
-      <h1 className="sm:pt-10 sm:pl-6 pl-4 text-lg uppercase">
+      <h1 className="sm:pt-5 sm:pl-6 pl-4 text-lg uppercase">
         🔥 Top <span className="text-gray-300">jobs</span>
       </h1>
       <ul role="list" className="divide-y divide-gray-200">
