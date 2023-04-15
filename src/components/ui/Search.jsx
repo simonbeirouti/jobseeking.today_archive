@@ -20,10 +20,10 @@ export default function Search() {
       </div>
       <button
         type="submit"
-        className="relative -ml-px bg-gray-100 inline-flex items-center gap-x-1.5 rounded-r-md px-10 text-sm font-semibold text-gray-900 shadow-light shadow-dark hover:bg-gray-500"
+        className="relative -ml-px bg-gray-100 inline-flex items-center gap-x-1.5 rounded-r-md px-10 text-sm font-semibold text-gray-900 shadow-light shadow-dark hover:bg-gray-500 group"
       >
         <MagnifyingGlassIcon
-          className="-ml-0.5 h-5 w-5 text-gray-400 shadow-light-icon shadow-dark-icon"
+          className="-ml-0.5 h-5 w-5 text-gray-400 shadow-light-icon shadow-dark-icon group-hover:text-white"
           aria-hidden="true"
         />
       </button>
