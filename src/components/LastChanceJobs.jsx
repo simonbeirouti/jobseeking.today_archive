@@ -33,7 +33,7 @@ const positions = [
 export default function LastChanceJobs() {
   return (
     <div className="overflow-hidden bg-white sm:rounded-md">
-      <h1 className="sm:pt-10 sm:pl-6 pl-4 text-lg uppercase">
+      <h1 className="sm:pl-6 pl-4 text-lg uppercase">
         ⏰ Ending <span className="text-gray-300">soon</span>
       </h1>
       <ul role="list" className="divide-y divide-gray-200">
