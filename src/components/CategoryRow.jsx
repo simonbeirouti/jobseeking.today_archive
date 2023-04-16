@@ -1,64 +1,3 @@
-// import Image from "next/image";
-// import { FaCode } from "react-icons/fa";
-
-// const files = [
-//   {
-//     category: "Developer",
-//     jobs: "124",
-//     source: "developer",
-//   },
-//   {
-//     category: "IMG_4985.HEIC",
-//     jobs: "124",
-//     source: "developer",
-//   },
-//   {
-//     category: "IMG_4985.HEIC",
-//     jobs: "124",
-//     source: "developer",
-//   },
-//   {
-//     category: "IMG_4985.HEIC",
-//     jobs: "124",
-//     source: "developer",
-//   },
-//   {
-//     category: "IMG_4985.HEIC",
-//     jobs: "124",
-//     source: "developer",
-//   },
-//   {
-//     category: "IMG_4985.HEIC",
-//     jobs: "124",
-//     source: "developer",
-//   },
-//   {
-//     category: "IMG_4985.HEIC",
-//     jobs: "124",
-//     source: "developer",
-//   },
-//   {
-//     category: "IMG_4985.HEIC",
-//     jobs: "124",
-//     source: "developer",
-//   },
-//   {
-//     category: "IMG_4985.HEIC",
-//     jobs: "124",
-//     source: "developer",
-//   },
-//   {
-//     category: "IMG_4985.HEIC",
-//     jobs: "124",
-//     source: "developer",
-//   },
-//   {
-//     category: "IMG_4985.HEIC",
-//     jobs: "124",
-//     source: "developer",
-//   },
-// ];
-
 const categories = [
   {
     name: "New Arrivals",
@@ -94,7 +33,7 @@ const categories = [
 
 export default function CategoryRow() {
   return (
-    <section className="py-8 xl:mx-auto xl:max-w-7xl xl:px-8 sm:-mt-0 -mt-14">
+    <section className="py-8 xl:mx-auto xl:max-w-7xl xl:px-8">
       <div className="px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8 xl:px-0">
         <h1 className="pl-4 text-lg uppercase text-gray-500">
           💼 Top <span className="text-gray-300">categories</span>
