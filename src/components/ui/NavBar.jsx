@@ -7,7 +7,7 @@ export default function NavBar() {
     <div className="bg-white">
       <header className="relative">
         <nav aria-label="Top" className="mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div className="px-4 pb-14 sm:px-0 sm:pb-0">
+          <div className="px-4 sm:px-0 sm:pb-0">
             <div className="flex h-16 items-center justify-between">
               <Link href="/" className="group">
                 <h1 className="tracking-widest font-light hidden md:inline uppercase text-lg ">
