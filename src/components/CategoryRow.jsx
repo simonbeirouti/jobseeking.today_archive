@@ -96,12 +96,12 @@ export default function CategoryRow() {
   return (
     <section className="py-8 xl:mx-auto xl:max-w-7xl xl:px-8 sm:-mt-0 -mt-14">
       <div className="px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8 xl:px-0">
-        <h1 className="pl-4 text-lg uppercase">
+        <h1 className="pl-4 text-lg uppercase text-gray-500">
           💼 Top <span className="text-gray-300">categories</span>
         </h1>
         <a
           href="#"
-          className="hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:block"
+          className="hidden text-sm font-semibold text-gray-500 hover:text-gray-400 sm:block"
         >
           Browse all categories
           <span aria-hidden="true"> &rarr;</span>
@@ -142,7 +142,7 @@ export default function CategoryRow() {
       <div className="mt-6 px-4 sm:hidden">
         <a
           href="#"
-          className="block text-sm font-semibold text-indigo-600 hover:text-indigo-500"
+          className="block text-sm font-semibold text-gray-500 hover:text-gray-400"
         >
           Browse all categories
           <span aria-hidden="true"> &rarr;</span>
