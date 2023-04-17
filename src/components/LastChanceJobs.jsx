@@ -32,13 +32,13 @@ const positions = [
 
 export default function LastChanceJobs() {
   return (
-    <div className="overflow-hidden bg-white sm:rounded-md">
+    <div className="overflow-hidden sm:rounded-md">
       <h1 className="sm:pt-5 ml-3 mb-2 text-lg font-medium">⏰ ENDING SOON</h1>
       <ul role="list" className="mx-3">
         {positions.map((position) => (
           <li
             key={position.id}
-            className="mb-4 border-2 border-black rounded-md transition-all shadow-[2px_2px_0px_#000] hover:shadow-[4px_4px_0px_#000]"
+            className="bg-white mb-4 border-2 border-black rounded-md transition-all shadow-[2px_2px_0px_#000] hover:shadow-[4px_4px_0px_#000]"
           >
             <a href="#">
               <div className="px-4 py-4 sm:px-6">

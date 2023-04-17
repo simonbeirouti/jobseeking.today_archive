@@ -4,14 +4,14 @@ import Search from "@/components/ui/Search";
 
 export default function NavBar() {
   return (
-    <div className="bg-white">
+    <div>
       <header className="relative">
         <nav aria-label="Top" className="mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="px-4 sm:px-0 sm:pb-0">
             <div className="flex h-16 items-center justify-between">
               <Link
                 href="/"
-                className="group p-1 rounded-md border-2 hidden md:block border-black shadow-[2px_2px_0px_#000] hover:shadow-[4px_4px_0px_#000]"
+                className="bg-white group p-1 rounded-md border-2 hidden md:block border-black shadow-[2px_2px_0px_#000] hover:shadow-[4px_4px_0px_#000]"
               >
                 <h1 className="tracking-widest font-medium hidden md:inline text-lg">
                   <span className="p-2">JOBSEEKING.TODAY</span>

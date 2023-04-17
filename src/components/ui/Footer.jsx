@@ -74,7 +74,7 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="bg-white">
+    <footer>
       <div className="mx-auto max-w-7xl overflow-hidden px-6 py-10 sm:py-12 lg:px-8">
         <nav
           className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12"
@@ -82,10 +82,7 @@ export default function Footer() {
         >
           {navigation.main.map((item) => (
             <div key={item.name} className="pb-6">
-              <a
-                href={item.href}
-                className="text-sm leading-6 text-gray-600 hover:text-gray-900"
-              >
+              <a href={item.href} className="text-md leading-6 uppercase">
                 {item.name}
               </a>
             </div>
@@ -96,14 +93,14 @@ export default function Footer() {
             <a
               key={item.name}
               href={item.href}
-              className="text-gray-400 hover:text-gray-500"
+              className="bg-white p-2 border-2 border-black rounded-md shadow-[2px_2px_0px_#000] hover:shadow-[4px_4px_0px_#000] transition-all"
             >
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />
             </a>
           ))}
         </div>
-        <p className="mt-10 text-center text-xs leading-5 text-gray-500">
+        <p className="uppercase mt-10 text-center text-sm leading-5">
           &copy; 2020 Your Company, Inc. All rights reserved.
         </p>
       </div>
