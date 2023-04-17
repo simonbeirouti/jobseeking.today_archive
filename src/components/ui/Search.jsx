@@ -12,7 +12,7 @@ export default function Search() {
           name="search"
           id="search"
           className="block w-full rounded-md border-2 outline-none border-black shadow-[2px_2px_0px_#000] pl-10 text-black placeholder:text-gray-400 sm:text-sm sm:leading-6"
-          placeholder="Developer"
+          placeholder="DEVELOPER"
         />
       </div>
       <button

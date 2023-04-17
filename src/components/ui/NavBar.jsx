@@ -13,11 +13,8 @@ export default function NavBar() {
                 href="/"
                 className="group p-1 rounded-md border-2 hidden md:block border-black shadow-[2px_2px_0px_#000] hover:shadow-[4px_4px_0px_#000]"
               >
-                <h1 className="tracking-widest font-light hidden md:inline uppercase text-lg">
-                  <span className="p-2">
-                    jobseeking
-                    <span className="text-gray-300">.today</span>
-                  </span>
+                <h1 className="tracking-widest font-medium hidden md:inline text-lg">
+                  <span className="p-2">JOBSEEKING.TODAY</span>
                 </h1>
               </Link>
 
@@ -26,7 +23,7 @@ export default function NavBar() {
               </div>
 
               <div className="flex items-center">
-                <div className="ml-4 flow-root border-2 border-black bg-red-500 shadow-[2px_2px_0px_#000] hover:shadow-[4px_4px_0px_#000] p-2 rounded-md lg:ml-8 hover:bg-red-400">
+                <div className="hover:transition-all ml-4 flow-root border-2 border-black bg-orange-500 shadow-[2px_2px_0px_#000] hover:shadow-[4px_4px_0px_#000] p-2 rounded-md lg:ml-8 hover:bg-orange-400">
                   <a href="#" className="group -m-2 flex items-center p-1.5">
                     <UserCircleIcon
                       className="h-6 w-6 flex-shrink-0"
