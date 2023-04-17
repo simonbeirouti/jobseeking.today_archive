@@ -33,13 +33,14 @@ const positions = [
 export default function TopJobs() {
   return (
     <div className="overflow-hidden bg-white sm:rounded-md">
-      <h1 className="sm:pt-5 sm:pl-6 pl-4 text-lg uppercase">
-        🔥 Top <span className="text-gray-300">jobs</span>
-      </h1>
-      <ul role="list" className="divide-y divide-gray-200">
+      <h1 className="sm:pt-5 ml-3 mb-2 text-lg font-medium">🔥 TOP JOBS</h1>
+      <ul role="list" className="mx-3">
         {positions.map((position) => (
-          <li key={position.id}>
-            <a href="#" className="block hover:bg-gray-50">
+          <li
+            key={position.id}
+            className="mb-4 border-2 border-black rounded-md transition-all shadow-[2px_2px_0px_#000] hover:shadow-[4px_4px_0px_#000]"
+          >
+            <a href="#" className="block">
               <div className="px-4 py-4 sm:px-6">
                 <div className="flex items-center justify-between">
                   <p className="truncate text-sm font-medium text-indigo-600">
