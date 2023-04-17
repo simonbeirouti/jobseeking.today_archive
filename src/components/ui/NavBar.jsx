@@ -6,7 +6,10 @@ export default function NavBar() {
   return (
     <div>
       <header className="relative">
-        <nav aria-label="Top" className="mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <nav
+          aria-label="Top"
+          className="mx-auto max-w-screen-2xl sm:px-6 lg:px-8"
+        >
           <div className="px-4 sm:px-0 sm:pb-0">
             <div className="flex h-16 items-center justify-between">
               <Link
