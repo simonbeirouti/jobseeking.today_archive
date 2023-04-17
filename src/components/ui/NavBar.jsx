@@ -27,13 +27,16 @@ export default function NavBar() {
 
               <div className="flex items-center">
                 <div className="hover:transition-all ml-4 flow-root border-2 border-black bg-orange-500 shadow-[2px_2px_0px_#000] hover:shadow-[4px_4px_0px_#000] p-2 rounded-md lg:ml-8 hover:bg-orange-400">
-                  <a href="#" className="group -m-2 flex items-center p-1.5">
+                  <Link
+                    href="/login"
+                    className="group -m-2 flex items-center p-1.5"
+                  >
                     <UserCircleIcon
                       className="h-6 w-6 flex-shrink-0"
                       aria-hidden="true"
                     />
                     <span className="sr-only">Account page</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
