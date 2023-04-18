@@ -1,11 +1,11 @@
 const navigation = {
   main: [
-    { name: "About", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Jobs", href: "#" },
-    { name: "Press", href: "#" },
-    { name: "Accessibility", href: "#" },
-    { name: "Partners", href: "#" },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
+    { name: "Jobs", href: "/jobs" },
+    { name: "Categories", href: "/categories" },
+    { name: "Privacy", href: "/privacy-policy" },
   ],
   social: [
     {
@@ -101,7 +101,7 @@ export default function Footer() {
           ))}
         </div>
         <p className="uppercase mt-10 text-center text-sm leading-5">
-          &copy; 2020 Your Company, Inc. All rights reserved.
+          &copy; 2023 JOBSEEKING.TODAY
         </p>
       </div>
     </footer>
