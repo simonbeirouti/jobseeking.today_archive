@@ -64,7 +64,7 @@ export default function CategoryRow() {
   return (
     <section className="py-8 xl:mx-auto xl:max-w-7xl xl:px-8">
       <div className="px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8 xl:px-0 font-medium">
-        <h1 className="pl-4 text-lg">💼 TOP CATEGORIES</h1>
+        <h1 className="text-lg">💼 TOP CATEGORIES</h1>
         <a href="#" className="hidden text-sm sm:block">
           BROWSE ALL
           <span aria-hidden="true"> &rarr;</span>
