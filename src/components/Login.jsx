@@ -32,9 +32,9 @@ export default function Login() {
 
   return (
     <>
-      <div className="flex min-h-full flex-col justify-center py-32 sm:px-6 lg:px-8">
+      <div className="flex min-h-full flex-col justify-center py-32 mx-5 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-md my-10">
-          <div className="bg-white px-4 py-8 sm:rounded-lg sm:px-10 transition-all shadow-[2px_2px_0px_#000] hover:shadow-[4px_4px_0px_#000] p-12 border-2 border-black rounded-md">
+          <div className="bg-white px-4 py-16 sm:rounded-lg sm:px-10 transition-all shadow-[2px_2px_0px_#000] hover:shadow-[4px_4px_0px_#000] p-12 border-2 border-black rounded-md">
             <div>
               <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900">
                 SIGN IN OR CREATE
