@@ -1,4 +1,78 @@
+import { useState } from "react";
+import { supabase } from "../lib/supabaseClient";
+import clsx from "clsx";
+
+const emailRegex = (email) => {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
+};
+
+const Errors = {
+  email: "Please enter a valid email address",
+  password: "Please enter a valid password",
+  unconfirmed: "Please confirm your email address",
+  error: "Something went wrong, please try again",
+  success: "Redirecting you now",
+};
 export default function LoginPage() {
+  const [loading, setLoading] = useState(false);
+  const [submissionStatus, setSubmissionStatus] = useState(null);
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({ ...prevState, [name]: value }));
+  };
+
+  const formComplete = (status) => {
+    setSubmissionStatus(status);
+    setLoading(false);
+    if (status === "success") {
+      setFormData({
+        email: "",
+        password: "",
+      });
+      setTimeout(() => setSubmissionStatus(null), 5000);
+    }
+  };
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setLoading(true);
+    if (emailRegex(formData.email)) {
+      const { user, error } = await supabase.auth.signInWithPassword({
+        email: formData.email,
+        password: formData.password,
+      });
+
+      if (error) {
+        if (error.message === "Invalid login credentials") {
+          formComplete("password");
+        } else if (error.message === "Email not confirmed") {
+          formComplete("unconfirmed");
+        } else {
+          const { user: newUser, error: signUpError } =
+            await supabase.auth.signUp({
+              email: formData.email,
+              password: formData.password,
+            });
+          if (signUpError) {
+            formComplete("error");
+          } else {
+            formComplete("success");
+          }
+        }
+      } else {
+        formComplete("success");
+      }
+    } else {
+      formComplete("email");
+    }
+  }
+
   return (
     <>
       <div className="flex min-h-full flex-col justify-center py-6 sm:px-6 lg:px-8">
@@ -97,7 +171,7 @@ export default function LoginPage() {
               </div>
 
               <div className="mt-6">
-                <form action="#" method="POST" className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label
                       htmlFor="email"
@@ -111,12 +185,13 @@ export default function LoginPage() {
                         name="email"
                         type="email"
                         autoComplete="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
                         required
                         className="block w-full rounded-md border-2 border-black py-1.5 shadow-[2px_2px_0px_#000] focus:shadow-[4px_4px_0px_#000] placeholder:text-gray-400 sm:text-sm sm:leading-6"
                       />
                     </div>
                   </div>
-
                   <div className="space-y-1">
                     <label
                       htmlFor="password"
@@ -130,12 +205,13 @@ export default function LoginPage() {
                         name="password"
                         type="password"
                         autoComplete="current-password"
+                        value={formData.password}
+                        onChange={handleInputChange}
                         required
                         className="block w-full rounded-md border-2 border-black py-1.5 shadow-[2px_2px_0px_#000] focus:shadow-[4px_4px_0px_#000]placeholder:text-gray-400 sm:text-sm sm:leading-6"
                       />
                     </div>
                   </div>
-
                   <div className="flex items-center justify-between">
                     <div className="text-sm">
                       <a
@@ -146,15 +222,24 @@ export default function LoginPage() {
                       </a>
                     </div>
                   </div>
-
                   <div>
                     <button
                       type="submit"
                       className="flex w-full justify-center rounded-md bg-red-500 px-3 py-2 transition-all shadow-[2px_2px_0px_#000] hover:shadow-[4px_4px_0px_#000] p-12 border-2 border-black text-sm font-semibold hover:bg-red-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                     >
-                      SIGN IN
+                      {loading ? "LOADING..." : "SIGN IN"}
                     </button>
                   </div>
+
+                  <p
+                    className={clsx(
+                      "mx-auto mt-2 ml-2 w-full text-left text-sm font-semibold leading-8",
+                      { "text-red-500": submissionStatus != "success" },
+                      { "text-green-500": submissionStatus === "success" }
+                    )}
+                  >
+                    {Errors[submissionStatus]}
+                  </p>
                 </form>
               </div>
             </div>
