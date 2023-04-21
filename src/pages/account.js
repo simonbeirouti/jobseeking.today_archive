@@ -1,4 +1,4 @@
-import MetaHead from "@/components/ui/MetaHead";
+import MetaHead from "@/ui/MetaHead";
 
 export default function JobsPage() {
   return (

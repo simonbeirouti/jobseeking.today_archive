@@ -1,7 +1,7 @@
-import MetaHead from "@/components/ui/MetaHead";
+import MetaHead from "@/ui/MetaHead";
 import CategoryRow from "@/components/CategoryRow";
 import TopJobs from "@/components/TopJobs";
-import LastChanceJobs from "@/components/LastChanceJobs";
+import EndingSoon from "@/components/EndingSoon";
 import CTA from "@/components/CTA";
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
         <CategoryRow />
       </div>
       <div className="mx-auto max-w-3xl my-6">
-        <LastChanceJobs />
+        <EndingSoon />
       </div>
       <CTA />
     </>
