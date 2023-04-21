@@ -1,6 +1,5 @@
 import MetaHead from "@/ui/MetaHead";
 import Jobs from "@/components/AllJobs";
-import Jobs2 from "@/components/AllJobs2";
 
 export default function JobsPage() {
   return (
@@ -9,8 +8,9 @@ export default function JobsPage() {
         page="Jobs"
         description="Create or log into your account to start applying to jobs on jobseeking today!"
       />
-      <Jobs />
-      <Jobs2 />
+      <div className="mx-auto max-w-4xl my-6">
+        <Jobs />
+      </div>
     </>
   );
 }
