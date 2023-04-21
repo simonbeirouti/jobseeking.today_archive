@@ -4,7 +4,6 @@ import {
   FaBookOpen,
   FaMoneyBillWave,
   FaCar,
-  FaMobile,
 } from "react-icons/fa";
 
 const categories = [
