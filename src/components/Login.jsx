@@ -1,4 +1,4 @@
-import { supabase } from "../lib/supabaseClient";
+import { supabase } from "@/lib/supabaseClient";
 import { FaGoogle, FaFacebookSquare, FaGithub } from "react-icons/fa";
 
 const providers = ["google", "facebook", "github"];
