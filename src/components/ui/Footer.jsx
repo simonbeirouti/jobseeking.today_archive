@@ -4,9 +4,9 @@ const navigation = {
   main: [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
     { name: "Jobs", href: "/jobs" },
     { name: "Categories", href: "/categories" },
+    { name: "Contact", href: "/contact" },
     { name: "Privacy", href: "/privacy-policy" },
   ],
   social: [
