@@ -10,7 +10,7 @@ module.exports = {
       vermillion: "#FB4437",
       gold: "#E5AB24",
       ecru: "#D5B772",
-      silver: "#CCCCCF",
+      silver: "#B5B5BA",
       white: "#FBFBFF",
     },
     extend: {},
