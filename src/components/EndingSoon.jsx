@@ -1,4 +1,5 @@
 import Listing from "@/ui/Listing";
+import Link from "next/link";
 
 const positions = [
   {
@@ -37,10 +38,10 @@ export default function LastChanceJobs() {
         <h1 className="sm:pt-5 ml-3 mb-2 text-lg font-medium">
           ⏰ ENDING SOON
         </h1>
-        <a href="/jobs" className="hidden text-sm mr-3 font-medium sm:block">
+        <Link href="/jobs" className="hidden text-sm mr-3 font-medium sm:block">
           BROWSE ALL
           <span aria-hidden="true"> &rarr;</span>
-        </a>
+        </Link>
       </div>
 
       <ul role="list" className="mx-3">
@@ -50,10 +51,10 @@ export default function LastChanceJobs() {
       </ul>
 
       <div className="flex mt-6 px-4 sm:hidden">
-        <a href="/jobs" className="block text-sm font-medium">
+        <Link href="/jobs" className="block text-sm font-medium">
           BROWSE ALL
           <span aria-hidden="true"> &rarr;</span>
-        </a>
+        </Link>
       </div>
     </div>
   );

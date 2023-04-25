@@ -1,4 +1,5 @@
 import Category from "@/ui/Category";
+import Link from "next/link";
 
 const categories = [
   {
@@ -43,10 +44,10 @@ export default function CategoryRow() {
     <section className="py-8 xl:mx-auto xl:max-w-7xl xl:px-8">
       <div className="px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8 xl:px-0 font-medium">
         <h1 className="text-lg">💼 TOP CATEGORIES</h1>
-        <a href="/categories" className="hidden text-sm sm:block">
+        <Link href="/categories" className="hidden text-sm sm:block">
           BROWSE ALL
           <span aria-hidden="true"> &rarr;</span>
-        </a>
+        </Link>
       </div>
 
       <div className="mt-4 flow-root">
@@ -62,10 +63,10 @@ export default function CategoryRow() {
       </div>
 
       <div className="mt-6 px-4 sm:hidden">
-        <a href="/categories" className="block text-sm font-medium">
+        <Link href="/categories" className="block text-sm font-medium">
           BROWSE ALL
           <span aria-hidden="true"> &rarr;</span>
-        </a>
+        </Link>
       </div>
     </section>
   );

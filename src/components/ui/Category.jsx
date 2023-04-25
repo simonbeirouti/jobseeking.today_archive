@@ -5,6 +5,9 @@ import {
   FaMoneyBillWave,
   FaCar,
 } from "react-icons/fa";
+import { useRouter } from "next/router";
+import clsx from "clsx";
+import Link from "next/link";
 
 const categoryIcons = {
   developer: {
@@ -25,10 +28,15 @@ const categoryIcons = {
 };
 
 export default function Category({ category }) {
+  const router = useRouter();
+
   return (
-    <a
+    <Link
       href={category.href}
-      className="shadow-style bg-orange-500 hover:bg-orange-400 relative flex h-56 w-56 flex-col justify-center items-center overflow-hidden rounded-md"
+      className={clsx(
+        "shadow-style bg-orange-500 hover:bg-orange-400 relative flex h-56 w-56 flex-col justify-center items-center overflow-hidden rounded-md",
+        { "xl:w-auto": router.pathname === "/" }
+      )}
     >
       <span aria-hidden="true" className="mb-4">
         {categoryIcons[category.category].icon}
@@ -39,6 +47,6 @@ export default function Category({ category }) {
       <span className="relative text-center text-xl font-bold text-white">
         {category.amount}
       </span>
-    </a>
+    </Link>
   );
 }
