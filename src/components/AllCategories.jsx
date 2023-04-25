@@ -75,11 +75,6 @@ const categories = [
 
 export default function AllCategories() {
   return (
-    // <div className="grid gap-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 place-content-center">
-    //   {categories.map((category) => (
-    //     <Category key={category.id} category={category} />
-    //   ))}
-    // </div>
     <div className="grid gap-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 place-items-center">
       {categories.map((category) => (
         <Category key={category.id} category={category} />

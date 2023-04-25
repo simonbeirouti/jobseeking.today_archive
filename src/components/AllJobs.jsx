@@ -32,13 +32,10 @@ const positions = [
 
 export default function AllJobs() {
   return (
-    <div className="overflow-hidden sm:rounded-md">
-      <h1 className="sm:pt-5 ml-3 mb-2 text-lg font-medium">🔥 TOP JOBS</h1>
-      <ul role="list" className="mx-3">
-        {positions.map((position) => (
-          <Listing position={position} key={position.id} />
-        ))}
-      </ul>
-    </div>
+    <ul role="list" className="mx-3">
+      {positions.map((position) => (
+        <Listing position={position} key={position.id} />
+      ))}
+    </ul>
   );
 }
