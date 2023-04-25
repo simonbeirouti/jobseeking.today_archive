@@ -9,4 +9,7 @@
   .shadow-style {
     @apply transition-all shadow-[2px_2px_0px_#000] hover:shadow-[4px_4px_0px_#000] border-2 border-licorice;
   }
+  .login-button {
+    @apply h-6 w-6 text-white;
+  }
 }

@@ -1,12 +1,22 @@
 import { supabase } from "@/lib/supabaseClient";
+import clsx from "clsx";
 import { FaGoogle, FaFacebookSquare, FaGithub } from "react-icons/fa";
 
 const providers = ["google", "facebook", "github"];
 
 const Icons = {
-  google: { icon: <FaGoogle className="h-6 w-6" /> },
-  facebook: { icon: <FaFacebookSquare className="h-6 w-6" /> },
-  github: { icon: <FaGithub className="h-6 w-6" /> },
+  google: {
+    icon: <FaGoogle className="login-button" />,
+    color: "bg-[#ea4335]",
+  },
+  facebook: {
+    icon: <FaFacebookSquare className="login-button" />,
+    color: "bg-[#1877f2]",
+  },
+  github: {
+    icon: <FaGithub className="login-button" />,
+    color: "bg-[#333333]",
+  },
 };
 
 export default function Login() {
@@ -51,7 +61,10 @@ export default function Login() {
                       <div className="mt-2" key={index}>
                         <button
                           onClick={() => handleProvider(provider)}
-                          className="inline-flex w-full justify-center rounded-md bg-white shadow-style px-3 py-2 ring-gray-300 focus:outline-offset-0"
+                          className={clsx(
+                            "inline-flex w-full justify-center rounded-md shadow-style px-3 py-2 ring-gray-300 focus:outline-offset-0",
+                            Icons[provider].color
+                          )}
                         >
                           <span className="sr-only">
                             Sign in with {provider}
