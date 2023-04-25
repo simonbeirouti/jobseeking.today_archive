@@ -2,7 +2,7 @@ export default function CTA() {
   return (
     <div>
       <div className="sm:mx-auto sm:max-w-7xl mx-2 rounded-md py-12 sm:px-6 sm:py-16 lg:px-8">
-        <div className="tracking-widest font-medium uppercase relative isolate overflow-hidden bg-blue-700 shadow-[2px_2px_0px_#000] hover:shadow-[4px_4px_0px_#000] border-4 border-black transition-all px-6 py-24 text-center rounded-md sm:px-16">
+        <div className="tracking-widest font-medium uppercase relative isolate overflow-hidden bg-blue-700 shadow-style px-6 py-24 text-center rounded-md sm:px-16">
           <h2 className="mx-auto max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Boost your productivity today.
           </h2>
@@ -13,13 +13,13 @@ export default function CTA() {
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
               href="#"
-              className="shadow-[2px_2px_0px_#000] hover:shadow-[4px_4px_0px_#000] border-2 border-black transition-all rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="shadow-style rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Get started
             </a>
             <a
               href="#"
-              className="shadow-[2px_2px_0px_#000] hover:shadow-[4px_4px_0px_#000] border-2 border-black transition-all rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="shadow-style rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Learn more
             </a>

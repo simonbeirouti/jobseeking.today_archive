@@ -11,13 +11,13 @@ export default function Search() {
           type="search"
           name="search"
           id="search"
-          className="block w-full rounded-md border-2 outline-none border-black shadow-[2px_2px_0px_#000] pl-10 text-black placeholder:text-gray-400 sm:text-sm sm:leading-6"
+          className="block w-full rounded-md outline-none pl-10 text-black placeholder:text-gray-400 sm:text-sm sm:leading-6 shadow-style"
           placeholder="DEVELOPER"
         />
       </div>
       <button
         type="submit"
-        className="ml-1 pointer bg-red-500 hover:bg-red-400 hover:transition-all shadow-[2px_2px_0px_#000] hover:shadow-[4px_4px_0px_#000] border-2 border-black relative inline-flex items-center gap-x-1.5 rounded-md px-10 text-sm font-semibold text-black hover:bg-medium-gray"
+        className="ml-1 pointer bg-red-500 hover:bg-red-400 relative inline-flex items-center gap-x-1.5 rounded-md px-10 text-sm font-semibold text-black hover:bg-medium-gray shadow-style"
       >
         <MagnifyingGlassIcon className="-ml-0.5 h-5 w-5" aria-hidden="true" />
       </button>

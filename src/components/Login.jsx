@@ -34,7 +34,7 @@ export default function Login() {
     <>
       <div className="flex min-h-full flex-col justify-center py-32 mx-5 sm:px-6 lg:px-8">
         <div className="mx-auto w-full max-w-md my-10">
-          <div className="bg-white px-4 py-16 sm:rounded-lg sm:px-10 transition-all shadow-[2px_2px_0px_#000] hover:shadow-[4px_4px_0px_#000] p-12 border-2 border-black rounded-md">
+          <div className="bg-white px-4 py-16 sm:rounded-lg sm:px-10 p-12 rounded-md shadow-style">
             <div>
               <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900">
                 SIGN IN OR CREATE
@@ -51,8 +51,7 @@ export default function Login() {
                       <div className="mt-2" key={index}>
                         <button
                           onClick={() => handleProvider(provider)}
-                          className="inline-flex w-full justify-center rounded-md bg-white transition-all shadow-[2px_2px_0px_#000]
-            hover:shadow-[4px_4px_0px_#000] border-2 border-black px-3 py-2 ring-gray-300 focus:outline-offset-0"
+                          className="inline-flex w-full justify-center rounded-md bg-white shadow-style px-3 py-2 ring-gray-300 focus:outline-offset-0"
                         >
                           <span className="sr-only">
                             Sign in with {provider}

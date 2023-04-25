@@ -16,14 +16,14 @@ export default function NavBar() {
             <div className="flex h-16 items-center justify-between">
               <Link
                 href="/"
-                className="bg-white group p-1 rounded-md border-2 hidden md:block border-black shadow-[2px_2px_0px_#000] hover:shadow-[4px_4px_0px_#000]"
+                className="bg-white group p-1 rounded-md hidden md:block shadow-style"
               >
                 <h1 className="tracking-widest font-medium hidden md:inline text-lg">
                   <span className="p-2">JOBSEEKING.TODAY</span>
                 </h1>
               </Link>
               <div className="flex items-center">
-                <div className="md:hidden hover:transition-all mr-2 flow-root border-2 border-black bg-orange-500 shadow-[2px_2px_0px_#000] hover:shadow-[4px_4px_0px_#000] p-2 rounded-md lg:ml-8 hover:bg-orange-400">
+                <div className="md:hidden mr-2 flow-root bg-orange-500 p-2 rounded-md lg:ml-8 hover:bg-orange-400 shadow-style">
                   <Link href="/" className="group -m-2 flex items-center p-1.5">
                     <HomeIcon
                       className="h-6 w-6 flex-shrink-0"
@@ -39,7 +39,7 @@ export default function NavBar() {
               </div>
 
               <div className="flex items-center">
-                <div className="hover:transition-all ml-4 flow-root border-2 border-black bg-orange-500 shadow-[2px_2px_0px_#000] hover:shadow-[4px_4px_0px_#000] p-2 rounded-md lg:ml-8 hover:bg-orange-400">
+                <div className="ml-4 flow-root bg-orange-500 p-2 rounded-md lg:ml-8 hover:bg-orange-400 shadow-style">
                   <Link
                     href={session ? "/account" : "/login"}
                     className="group -m-2 flex items-center p-1.5"

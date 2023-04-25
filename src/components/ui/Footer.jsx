@@ -93,7 +93,7 @@ export default function Footer() {
             <a
               key={item.name}
               href={item.href}
-              className="bg-white p-2 border-2 border-black rounded-md shadow-[2px_2px_0px_#000] hover:shadow-[4px_4px_0px_#000] transition-all"
+              className="bg-white p-2 rounded-md shadow-style"
             >
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />

@@ -2,10 +2,7 @@ import { CalendarIcon, MapPinIcon, UsersIcon } from "@heroicons/react/20/solid";
 
 export default function Listing({ position }) {
   return (
-    <li
-      key={position.id}
-      className="bg-white mb-4 border-2 border-black rounded-md transition-all shadow-[2px_2px_0px_#000] hover:shadow-[4px_4px_0px_#000]"
-    >
+    <li key={position.id} className="bg-white mb-4 rounded-md shadow-style">
       <a href="#" className="block">
         <div className="px-4 py-4 sm:px-6">
           <div className="flex items-center justify-between">
