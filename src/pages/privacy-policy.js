@@ -1,4 +1,5 @@
 import MetaHead from "@/ui/MetaHead";
+import Header from "@/ui/Header";
 
 export default function PrivacyPage() {
   return (
@@ -7,7 +8,11 @@ export default function PrivacyPage() {
         page="Privacy Policy"
         description="Privacy Policy for JobSeeking.today where you can learn about the sites usage of data"
       />
-      <div className="max-w-5xl mx-auto my-20 space-y-4 bg-white p-10 rounded-md border-2 border-black shadow-[2px_2px_0px_#000] hover:shadow-[4px_4px_0px_#000] transition-all">
+      <Header
+        title="Privacy policy"
+        description="Our privacy policy outlines how we protect your personal information and ensure your privacy. By using our website, you can trust that your data is secure and we comply with data protection laws. We value your privacy and take all necessary measures to prevent data breaches and other violations."
+      />
+      <div className="max-w-lg md:max-w-3xl lg:max-w-5xl mx-auto space-y-4 bg-white p-10 rounded-md shadow-style">
         <h1>Privacy Policy for jobseeking.today</h1>
         <p>
           At jobseekingtoday, accessible from https://jobseeking.today, one of
