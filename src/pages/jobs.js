@@ -13,7 +13,7 @@ export default function JobsPage() {
         title="Jobs"
         description="Our job page is designed to make your job search as easy and stress-free as possible. With up-to-date listings for all of our current job openings, you'll be able to find the position that's right for you. Plus, our user-friendly interface makes it simple to search and filter jobs by location, experience level, and more."
       />
-      <div className="mx-auto max-w-4xl my-6">
+      <div className="mx-auto m-4 max-w-6xl">
         <Jobs />
       </div>
     </>
