@@ -1,6 +1,7 @@
 import MetaHead from "@/ui/MetaHead";
 import Header from "@/ui/Header";
 import AllCategories from "@/components/AllCategories";
+import CTA from "@/components/CTA";
 
 export default function JobsPage() {
   return (
@@ -16,6 +17,7 @@ export default function JobsPage() {
       <div className="mx-auto m-4 max-w-6xl">
         <AllCategories />
       </div>
+      <CTA />
     </>
   );
 }
