@@ -34,7 +34,7 @@ export default function Category({ category }) {
     <Link
       href={category.href}
       className={clsx(
-        "shadow-style bg-orange-500 hover:bg-orange-400 relative flex h-44 w-44 sm:h-56 sm:w-56 flex-col justify-center items-center overflow-hidden rounded-md",
+        "shadow-style bg-apple hover:bg-pear relative flex h-44 w-44 sm:h-56 sm:w-56 flex-col justify-center items-center overflow-hidden rounded-md",
         { "xl:w-auto": router.pathname === "/" }
       )}
     >
