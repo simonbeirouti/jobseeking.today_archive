@@ -23,7 +23,7 @@ export default function NavBar() {
                 </h1>
               </Link>
               <div className="flex items-center">
-                <div className="md:hidden mr-2 flow-root bg-orange-500 p-2 rounded-md lg:ml-8 hover:bg-orange-400 shadow-style">
+                <div className="md:hidden mr-2 flow-root p-2 rounded-md lg:ml-8 shadow-style bg-chilli hover:bg-vermillion">
                   <Link href="/" className="group -m-2 flex items-center p-1.5">
                     <HomeIcon
                       className="h-6 w-6 flex-shrink-0"
@@ -39,7 +39,7 @@ export default function NavBar() {
               </div>
 
               <div className="flex items-center">
-                <div className="ml-4 flow-root bg-orange-500 p-2 rounded-md lg:ml-8 hover:bg-orange-400 shadow-style">
+                <div className="ml-4 flow-root bg-chilli hover:bg-vermillion shadow-style p-2 rounded-md lg:ml-8 hover:bg-orange-400">
                   <Link
                     href={session ? "/account" : "/login"}
                     className="group -m-2 flex items-center p-1.5"
