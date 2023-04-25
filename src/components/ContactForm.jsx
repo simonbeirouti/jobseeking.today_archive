@@ -109,7 +109,7 @@ export default function ContactForm() {
         <div className="mt-5 mb-2.5">
           <button
             type="submit"
-            className="block w-full pointer bg-red-500 hover:bg-red-400 relative items-center gap-x-1.5 rounded-md py-3 text-sm font-semibold text-black hover:bg-medium-gray shadow-style"
+            className="block w-full pointer bg-chilli hover:bg-vermillion relative items-center gap-x-1.5 rounded-md py-3 text-sm font-semibold hover:bg-medium-gray shadow-style"
           >
             {loading ? "SENDING..." : "LET'S TALK"}
           </button>
