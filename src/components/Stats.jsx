@@ -14,7 +14,7 @@ export default function Stats() {
         {stats.map((item) => (
           <div
             key={item.name}
-            className="overflow-hidden rounded-md bg-white shadow-style px-4 sm:p-6"
+            className="overflow-hidden rounded-md bg-white shadow-style px-4 p-6"
           >
             <dt className="truncate text-sm font-medium text-gray-500">
               {item.name}
