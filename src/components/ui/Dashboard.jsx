@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { Dialog, Transition } from "@headlessui/react";
 import {
   Bars3Icon,
+  ArrowRightOnRectangleIcon,
   CalendarIcon,
   ChartPieIcon,
   DocumentDuplicateIcon,
@@ -13,6 +14,7 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import clsx from "clsx";
+import Image from "next/image";
 
 const navigation = [
   { name: "Dashboard", href: "/dashboard", icon: HomeIcon, current: false },
@@ -93,8 +95,10 @@ export default function Dashboard({ children }) {
                   {/* Sidebar component, swap this element with another sidebar if you like */}
                   <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-white shadow-style px-6 pb-2 ring-1 ring-white/10">
                     <div className="flex h-16 shrink-0 items-center">
-                      <img
+                      <Image
                         className="h-8 w-auto"
+                        width={100}
+                        height={32}
                         src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                         alt="Your Company"
                       />
@@ -107,6 +111,7 @@ export default function Dashboard({ children }) {
                               <li key={item.name}>
                                 <Link
                                   href={item.href}
+                                  onClick={() => setSidebarOpen(false)}
                                   className={clsx(
                                     item.current
                                       ? "bg-silver text-white"
@@ -125,18 +130,13 @@ export default function Dashboard({ children }) {
                           </ul>
                         </li>
                         <li className="-mx-6 mt-auto">
-                          <Link
-                            href="/dashboard/account"
-                            className="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-50"
-                          >
-                            <img
-                              className="h-8 w-8 rounded-full bg-gray-50"
-                              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                              alt=""
+                          <h1 className="mx-3 group flex gap-x-3 uppercase rounded-md p-2 text-sm leading-6 font-semibold text-white bg-chilli hover:bg-vermillion shadow-style cursor-pointer">
+                            <ArrowRightOnRectangleIcon
+                              className="h-6 w-6 shrink-0"
+                              aria-hidden="true"
                             />
-                            <span className="sr-only">Account</span>
-                            <span aria-hidden="true">NAME</span>
-                          </Link>
+                            Logout
+                          </h1>
                         </li>
                       </ul>
                     </nav>
@@ -151,8 +151,10 @@ export default function Dashboard({ children }) {
         <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
           <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-white px-6 shadow-style">
             <div className="flex h-16 shrink-0 items-center">
-              <img
+              <Image
                 className="h-8 w-auto"
+                width={100}
+                height={32}
                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                 alt="Your Company"
               />
@@ -165,6 +167,7 @@ export default function Dashboard({ children }) {
                       <li key={item.name}>
                         <Link
                           href={item.href}
+                          onClick={() => setSidebarOpen(false)}
                           className={clsx(
                             item.current
                               ? "bg-apple hover:bg-pear text-white"
@@ -187,8 +190,10 @@ export default function Dashboard({ children }) {
                     href="/dashboard/account"
                     className="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-licorice"
                   >
-                    <img
+                    <Image
                       className="h-8 w-8 rounded-md shadow-style"
+                      width={32}
+                      height={32}
                       src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                       alt=""
                     />
@@ -203,7 +208,7 @@ export default function Dashboard({ children }) {
           </div>
         </div>
 
-        <div className="bg-white sticky top-0 z-40 flex items-center gap-x-6 bg-gray-900 px-4 py-4 shadow-style sm:px-6 lg:hidden">
+        <div className="bg-white sticky top-0 z-40 flex items-center gap-x-6 bg-gray-900 px-4 py-4 shadow-style px-6 lg:hidden">
           <div>
             <button
               type="button"
@@ -222,10 +227,12 @@ export default function Dashboard({ children }) {
             DASHBOARD
           </div>
 
-          <Link href="#">
+          <Link href="#" onClick={() => setSidebarOpen(false)}>
             <span className="sr-only">Your profile</span>
-            <img
+            <Image
               className="h-10 w-10 rounded-md shadow-style"
+              width={40}
+              height={40}
               src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
               alt=""
             />

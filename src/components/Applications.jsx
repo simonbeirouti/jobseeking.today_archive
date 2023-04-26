@@ -3,6 +3,7 @@ import { Menu, Transition } from "@headlessui/react";
 import { EllipsisHorizontalIcon } from "@heroicons/react/20/solid";
 import clsx from "clsx";
 import DashHeader from "@/ui/DashHeader";
+import Image from "next/image";
 
 const statuses = {
   Applied: "bg-pear ring-apple",
@@ -87,9 +88,11 @@ export default function Applications() {
             className="bg-white shadow-style overflow-hidden rounded-md"
           >
             <div className="flex items-center gap-x-4 border-b border-gray-900/5 bg-gray-50 p-6">
-              <img
+              <Image
                 src={client.imageUrl}
                 alt={client.name}
+                width={100}
+                height={100}
                 className="h-12 w-12 shadow-style flex-none rounded-md"
               />
               <div className="text-sm font-medium leading-6 text-gray-900">
