@@ -12,4 +12,10 @@
   .login-button {
     @apply h-6 w-6 text-white;
   }
+  .pp-title {
+    @apply text-lg font-semibold;
+  }
+  .pp-text {
+    @apply text-base py-2;
+  }
 }
