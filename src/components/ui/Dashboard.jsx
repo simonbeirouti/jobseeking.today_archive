@@ -208,7 +208,7 @@ export default function Dashboard({ children }) {
           </div>
         </div>
 
-        <div className="bg-white sticky top-0 z-40 flex items-center gap-x-6 bg-gray-900 px-4 py-4 shadow-style px-6 lg:hidden">
+        <div className="bg-white sticky top-0 z-40 flex items-center gap-x-6 bg-gray-900 py-4 shadow-style px-6 lg:hidden">
           <div>
             <button
               type="button"
