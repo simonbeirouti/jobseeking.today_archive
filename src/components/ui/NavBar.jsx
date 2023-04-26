@@ -29,7 +29,7 @@ export default function NavBar() {
                       className="h-6 w-6 flex-shrink-0"
                       aria-hidden="true"
                     />
-                    <span className="sr-only">Home page</span>
+                    <span className="sr-only">Home</span>
                   </Link>
                 </div>
               </div>
@@ -39,16 +39,16 @@ export default function NavBar() {
               </div>
 
               <div className="flex items-center">
-                <div className="ml-4 flow-root bg-chilli hover:bg-vermillion shadow-style p-2 rounded-md lg:ml-8 hover:bg-orange-400">
+                <div className="ml-4 flow-root bg-chilli hover:bg-vermillion shadow-style p-2 rounded-md lg:ml-8">
                   <Link
-                    href={session ? "/account" : "/login"}
+                    href={session ? "/dashboard" : "/login"}
                     className="group -m-2 flex items-center p-1.5"
                   >
                     <UserCircleIcon
                       className="h-6 w-6 flex-shrink-0"
                       aria-hidden="true"
                     />
-                    <span className="sr-only">Account page</span>
+                    <span className="sr-only">Dashboard</span>
                   </Link>
                 </div>
               </div>
