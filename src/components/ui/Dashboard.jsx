@@ -118,10 +118,8 @@ export default function Dashboard({ children }) {
                                   href={item.href}
                                   onClick={() => setSidebarOpen(false)}
                                   className={clsx(
-                                    item.current
-                                      ? "bg-silver text-white"
-                                      : "text-indigo-200 hover:text-white hover:bg-indigo-700",
-                                    "group flex gap-x-3 uppercase rounded-md p-2 text-sm leading-6 font-semibold text-licorice hover:bg-silver shadow-style"
+                                    { "bg-apple text-white": item.current },
+                                    "group flex gap-x-3 uppercase rounded-md p-2 text-sm leading-6 font-semibold text-licorice hover:bg-pear shadow-style"
                                   )}
                                 >
                                   <item.icon
@@ -177,10 +175,8 @@ export default function Dashboard({ children }) {
                           href={item.href}
                           onClick={() => setSidebarOpen(false)}
                           className={clsx(
-                            item.current
-                              ? "bg-apple hover:bg-pear text-white"
-                              : "",
-                            "group flex gap-x-3 uppercase rounded-md p-2 text-sm leading-6 font-semibold text-licorice shadow-style"
+                            { "bg-apple text-white": item.current },
+                            "group flex gap-x-3 uppercase rounded-md p-2 text-sm leading-6 font-semibold text-licorice hover:bg-pear shadow-style"
                           )}
                         >
                           <item.icon
