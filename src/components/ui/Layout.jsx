@@ -7,7 +7,7 @@ export default function Layout({ children }) {
   const router = useRouter();
   return (
     <>
-      {router.pathname === "/dashboard" ? (
+      {router.pathname.startsWith("/dashboard") ? (
         <Dashboard>{children}</Dashboard>
       ) : (
         <>
