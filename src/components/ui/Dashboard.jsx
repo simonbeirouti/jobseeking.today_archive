@@ -34,6 +34,11 @@ export default function Dashboard({ children }) {
   const router = useRouter();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
+  const handleLogout = () => {
+    console.log("logout");
+    router.push("/");
+  };
+
   const updatedNavigation = navigation.map((item) => ({
     ...item,
     current: item.href === router.pathname,
@@ -130,7 +135,10 @@ export default function Dashboard({ children }) {
                           </ul>
                         </li>
                         <li className="-mx-6 mt-auto">
-                          <h1 className="mx-3 group flex gap-x-3 uppercase rounded-md p-2 text-sm leading-6 font-semibold text-white bg-chilli hover:bg-vermillion shadow-style cursor-pointer">
+                          <h1
+                            className="mx-3 group flex gap-x-3 uppercase rounded-md p-2 text-sm leading-6 font-semibold text-white bg-chilli hover:bg-vermillion shadow-style cursor-pointer"
+                            onClick={handleLogout}
+                          >
                             <ArrowRightOnRectangleIcon
                               className="h-6 w-6 shrink-0"
                               aria-hidden="true"
@@ -188,7 +196,7 @@ export default function Dashboard({ children }) {
                 <li className="-mx-6 mt-auto">
                   <Link
                     href="/dashboard/account"
-                    className="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-licorice"
+                    className="m-3 flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold text-white bg-polynesian hover:bg-lapis shadow-style cursor-pointer"
                   >
                     <Image
                       className="h-8 w-8 rounded-md shadow-style"
@@ -198,7 +206,7 @@ export default function Dashboard({ children }) {
                       alt=""
                     />
                     <span className="sr-only">Account</span>
-                    <span className="tracking-widest" aria-hidden="true">
+                    <span className="tracking-widest m-1" aria-hidden="true">
                       NAME
                     </span>
                   </Link>
@@ -227,7 +235,7 @@ export default function Dashboard({ children }) {
             DASHBOARD
           </div>
 
-          <Link href="#" onClick={() => setSidebarOpen(false)}>
+          <Link href="/dashboard/account">
             <span className="sr-only">Your profile</span>
             <Image
               className="h-10 w-10 rounded-md shadow-style"
