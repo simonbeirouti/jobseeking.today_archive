@@ -1,4 +1,6 @@
 import { Fragment, useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import { Dialog, Transition } from "@headlessui/react";
 import {
   Bars3Icon,
@@ -10,11 +12,16 @@ import {
   UsersIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-// import clsx from "clsx";
+import clsx from "clsx";
 
 const navigation = [
-  { name: "Dashboard", href: "#", icon: HomeIcon, current: false },
-  { name: "Team", href: "#", icon: UsersIcon, current: false },
+  { name: "Dashboard", href: "/dashboard", icon: HomeIcon, current: false },
+  {
+    name: "Applications",
+    href: "/dashboard/applications",
+    icon: UsersIcon,
+    current: false,
+  },
   { name: "Projects", href: "#", icon: FolderIcon, current: false },
   { name: "Calendar", href: "#", icon: CalendarIcon, current: false },
   { name: "Documents", href: "#", icon: DocumentDuplicateIcon, current: false },
@@ -22,7 +29,13 @@ const navigation = [
 ];
 
 export default function Dashboard({ children }) {
+  const router = useRouter();
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const updatedNavigation = navigation.map((item) => ({
+    ...item,
+    current: item.href === router.pathname,
+  }));
 
   return (
     <>
@@ -68,7 +81,7 @@ export default function Dashboard({ children }) {
                     <div className="absolute left-full top-0 flex w-16 justify-center pt-5">
                       <button
                         type="button"
-                        className="-m-2.5 p-2.5"
+                        className="-m-2.5 p-2.5 bg-chilli hover:bg-vermillion shadow-style rounded-md"
                         onClick={() => setSidebarOpen(false)}
                       >
                         <span className="sr-only">Close sidebar</span>
@@ -90,25 +103,30 @@ export default function Dashboard({ children }) {
                       <ul role="list" className="flex flex-1 flex-col gap-y-7">
                         <li>
                           <ul role="list" className="-mx-2 space-y-2">
-                            {navigation.map((item) => (
+                            {updatedNavigation.map((item) => (
                               <li key={item.name}>
-                                <a
+                                <Link
                                   href={item.href}
-                                  className="group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold text-licorice hover:bg-silver shadow-style"
+                                  className={clsx(
+                                    item.current
+                                      ? "bg-silver text-white"
+                                      : "text-indigo-200 hover:text-white hover:bg-indigo-700",
+                                    "group flex gap-x-3 uppercase rounded-md p-2 text-sm leading-6 font-semibold text-licorice hover:bg-silver shadow-style"
+                                  )}
                                 >
                                   <item.icon
                                     className="h-6 w-6 shrink-0"
                                     aria-hidden="true"
                                   />
                                   {item.name}
-                                </a>
+                                </Link>
                               </li>
                             ))}
                           </ul>
                         </li>
                         <li className="-mx-6 mt-auto">
-                          <a
-                            href="#"
+                          <Link
+                            href="/dashboard/account"
                             className="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-50"
                           >
                             <img
@@ -118,7 +136,7 @@ export default function Dashboard({ children }) {
                             />
                             <span className="sr-only">Account</span>
                             <span aria-hidden="true">NAME</span>
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </nav>
@@ -143,26 +161,31 @@ export default function Dashboard({ children }) {
               <ul role="list" className="flex flex-1 flex-col gap-y-7">
                 <li>
                   <ul role="list" className="-mx-2 space-y-2">
-                    {navigation.map((item) => (
+                    {updatedNavigation.map((item) => (
                       <li key={item.name}>
-                        <a
+                        <Link
                           href={item.href}
-                          className="group flex gap-x-3 uppercase rounded-md p-2 text-sm leading-6 font-semibold text-licorice hover:bg-silver shadow-style"
+                          className={clsx(
+                            item.current
+                              ? "bg-apple hover:bg-pear text-white"
+                              : "",
+                            "group flex gap-x-3 uppercase rounded-md p-2 text-sm leading-6 font-semibold text-licorice shadow-style"
+                          )}
                         >
                           <item.icon
                             className="h-6 w-6 shrink-0"
                             aria-hidden="true"
                           />
                           {item.name}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
                 </li>
                 <li className="-mx-6 mt-auto">
-                  <a
-                    href="#"
-                    className="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-licorice hover:bg-silver"
+                  <Link
+                    href="/dashboard/account"
+                    className="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-licorice"
                   >
                     <img
                       className="h-8 w-8 rounded-md shadow-style"
@@ -173,23 +196,23 @@ export default function Dashboard({ children }) {
                     <span className="tracking-widest" aria-hidden="true">
                       NAME
                     </span>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>
           </div>
         </div>
 
-        <div className="sticky top-0 z-40 flex items-center gap-x-6 bg-gray-900 px-4 py-4 shadow-sm sm:px-6 lg:hidden">
-          <div className="bg-chilli hover:bg-vermillion shadow-style p-1 rounded-md">
+        <div className="bg-white sticky top-0 z-40 flex items-center gap-x-6 bg-gray-900 px-4 py-4 shadow-style sm:px-6 lg:hidden">
+          <div>
             <button
               type="button"
-              className="text-licorice lg:hidden"
+              className="-m-2.5 p-2.5 bg-chilli hover:bg-vermillion shadow-style rounded-md"
               onClick={() => setSidebarOpen(true)}
             >
               <span className="sr-only">Open sidebar</span>
               <Bars3Icon
-                className="h-6 w-6 -mb-1.5 flex-shrink-0"
+                className="h-6 w-6  flex-shrink-0"
                 aria-hidden="true"
               />
             </button>
@@ -199,14 +222,14 @@ export default function Dashboard({ children }) {
             DASHBOARD
           </div>
 
-          <a href="#">
+          <Link href="#">
             <span className="sr-only">Your profile</span>
             <img
-              className="h-8 w-8 rounded-md bg-chilli hover:bg-vermillion shadow-style"
+              className="h-10 w-10 rounded-md shadow-style"
               src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
               alt=""
             />
-          </a>
+          </Link>
         </div>
 
         <main className="py-10 lg:pl-72">
