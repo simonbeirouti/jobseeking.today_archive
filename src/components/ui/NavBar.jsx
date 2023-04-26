@@ -16,7 +16,7 @@ export default function NavBar() {
             <div className="flex h-16 items-center justify-between">
               <Link
                 href="/"
-                className="bg-silver group p-1 rounded-md hidden md:block shadow-style"
+                className="bg-white group p-1 rounded-md hidden md:block shadow-style"
               >
                 <h1 className="tracking-widest font-medium hidden md:inline text-lg">
                   <span className="p-2">JOBSEEKING.TODAY</span>
