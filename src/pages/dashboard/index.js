@@ -1,3 +1,9 @@
+import Stats from "@/components/stats";
+
 export default function DashboardHomePage() {
-  return <h1>Dashboard</h1>;
+  return (
+    <>
+      <Stats />
+    </>
+  );
 }
