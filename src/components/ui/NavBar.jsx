@@ -23,7 +23,7 @@ export default function NavBar() {
                 </h1>
               </Link>
               <div className="flex items-center">
-                <div className="md:hidden mr-2 flow-root p-2 rounded-md lg:ml-8 shadow-style bg-silver">
+                <div className="md:hidden mr-2 flow-root p-2 rounded-md lg:ml-8 shadow-style bg-white">
                   <Link href="/" className="group -m-2 flex items-center p-1.5">
                     <HomeIcon
                       className="h-6 w-6 flex-shrink-0"
