@@ -14,9 +14,7 @@ export default function PrivacyPage() {
       />
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="bg-white shadow-style p-4 rounded-md mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-          <h1 className="text-2xl font-bold">
-            Privacy Policy for jobseeking.today
-          </h1>
+          <h1 className="text-2xl font-bold">jobseeking.today</h1>
           <p className="pp-text">
             At jobseekingtoday, accessible from https://jobseeking.today, one of
             our main priorities is the privacy of our visitors. This Privacy
