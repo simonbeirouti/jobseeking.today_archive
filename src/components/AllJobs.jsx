@@ -1,4 +1,5 @@
 import Listing from "@/ui/Listing";
+import Sorter from "@/ui/Sorter";
 
 const positions = [
   {
@@ -32,7 +33,8 @@ const positions = [
 
 export default function AllJobs() {
   return (
-    <ul role="list" className="mx-3">
+    <ul role="list">
+      <Sorter />
       {positions.map((position) => (
         <Listing position={position} key={position.id} />
       ))}
