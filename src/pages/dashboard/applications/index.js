@@ -1,5 +1,11 @@
+import DashHeader from "@/ui/DashHeader";
 import Applications from "@/components/Applications";
 
 export default function ApplicationPage() {
-  return <Applications />;
+  return (
+    <>
+      <DashHeader title="APPLICATIONS" />
+      <Applications />
+    </>
+  );
 }
