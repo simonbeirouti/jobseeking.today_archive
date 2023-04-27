@@ -2,7 +2,6 @@ import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { EllipsisHorizontalIcon } from "@heroicons/react/20/solid";
 import clsx from "clsx";
-import DashHeader from "@/ui/DashHeader";
 import Image from "next/image";
 
 const statuses = {
@@ -77,7 +76,6 @@ const clients = [
 export default function Applications() {
   return (
     <>
-      <DashHeader title="APPLICATIONS" />
       <ul
         role="list"
         className="grid grid-cols-1 gap-x-6 gap-y-8 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 min-[1792px]:grid-cols-5 min-[2048px]:grid-cols-6 xl:gap-x-8"
@@ -118,30 +116,30 @@ export default function Applications() {
                   <Menu.Items className="absolute right-0 z-10 mt-0.5 w-32 origin-top-right rounded-md bg-white shadow-style focus:outline-none">
                     <Menu.Item>
                       {({ active }) => (
-                        <a
+                        <button
                           href="#"
                           className={clsx(
                             active ? "bg-silver" : "",
-                            "block px-3 py-2 text-sm leading-6"
+                            "block w-full px-3 text-left py-2 text-sm leading-6"
                           )}
                         >
                           VIEW
                           <span className="sr-only">, {client.name}</span>
-                        </a>
+                        </button>
                       )}
                     </Menu.Item>
                     <Menu.Item>
                       {({ active }) => (
-                        <a
+                        <button
                           href="#"
                           className={clsx(
                             active ? "bg-silver" : "",
-                            "block px-3 py-2 text-sm leading-6"
+                            "block w-full px-3 text-left py-2 text-sm leading-6"
                           )}
                         >
                           ARCHIVE
                           <span className="sr-only">, {client.name}</span>
-                        </a>
+                        </button>
                       )}
                     </Menu.Item>
                   </Menu.Items>
