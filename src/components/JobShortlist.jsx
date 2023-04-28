@@ -31,12 +31,12 @@ const positions = [
   },
 ];
 
-export default function LastChanceJobs() {
+export default function LastChanceJobs({ type }) {
   return (
     <div className="overflow-hidden sm:rounded-md">
       <div className="flex items-center justify-between">
         <h1 className="sm:pt-5 ml-3 mb-2 text-lg font-medium">
-          ⏰ ENDING SOON
+          {type === "ending" ? "⏰ ENDING SOON" : "🔥 TOP JOBS"}
         </h1>
         <Link href="/jobs" className="hidden text-sm mr-3 font-medium sm:block">
           BROWSE ALL
