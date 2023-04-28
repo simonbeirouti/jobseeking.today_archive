@@ -1,4 +1,4 @@
-import DashHeader from "@/ui/DashHeader";
+import DashHeader from "@/components/dashboard/DashHeader";
 
 const stats = [
   { name: "TOTAL APPLICATIONS", stat: "71,897" },

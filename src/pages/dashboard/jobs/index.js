@@ -1,13 +1,13 @@
 import MetaHead from "@/ui/MetaHead";
 import AllJobs from "@/components/AllJobs";
-import DashHeader from "@/ui/DashHeader";
+import DashHeader from "@/dashboard/DashHeader";
 
 export default function AccountPage() {
   return (
     <>
       <MetaHead
         page="Jobs"
-        description="The account page for jobseeking.today where you can edit your profile and manage your applications."
+        description="The jobs page where you can one click apply for seamless and automated interaction!"
       />
       <DashHeader title="JOBS" />
       <AllJobs />

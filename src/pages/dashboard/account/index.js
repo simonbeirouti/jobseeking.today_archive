@@ -1,6 +1,5 @@
 import MetaHead from "@/ui/MetaHead";
-import Account from "@/components/Account";
-// import DashHeader from "@/components/ui/DashHeader";
+import Account from "@/dashboard/Account";
 
 export default function AccountPage() {
   return (
@@ -9,7 +8,6 @@ export default function AccountPage() {
         page="Account"
         description="The account page for jobseeking.today where you can edit your profile and manage your applications."
       />
-      {/* <DashHeader title="Account" /> */}
       <Account />
     </>
   );

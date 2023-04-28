@@ -76,6 +76,28 @@ const clients = [
 export default function Applications() {
   return (
     <>
+      <div className="flex flex-col mb-4 md:flex-row md:flex-wrap">
+        <div className="md:w-1/3 mb-2 md:mb-0">
+          <label
+            htmlFor="location"
+            className="block text-sm font-medium leading-6 text-licorice"
+          >
+            STATUS
+          </label>
+          <select
+            id="location"
+            name="location"
+            className="mt-1 block w-full rounded-md py-1.5 pl-3 pr-10 text-licorice shadow-style sm:text-sm sm:leading-6"
+            defaultValue="ALL"
+          >
+            <option>ALL</option>
+            <option>APPLIED</option>
+            <option>PENDING</option>
+            <option>UNSUCCESSFUL</option>
+          </select>
+        </div>
+      </div>
+
       <ul
         role="list"
         className="grid grid-cols-1 gap-x-6 gap-y-8 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 min-[1792px]:grid-cols-5 min-[2048px]:grid-cols-6 xl:gap-x-8"
