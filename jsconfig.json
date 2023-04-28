@@ -6,6 +6,7 @@
       "@/components/*": ["./src/components/*"],
       "@/ui/*": ["./src/components/ui/*"],
       "@/lib/*": ["./src/lib/*"],
+      "@/dashboard/*": ["./src/components/dashboard/*"],
     }
   }
 }
