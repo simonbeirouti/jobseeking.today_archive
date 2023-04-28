@@ -5,12 +5,12 @@ import { Dialog, Transition } from "@headlessui/react";
 import {
   Bars3Icon,
   ArrowRightOnRectangleIcon,
-  CalendarIcon,
-  ChartPieIcon,
-  DocumentDuplicateIcon,
-  FolderIcon,
+  // CalendarIcon,
+  // ChartPieIcon,
+  // DocumentDuplicateIcon,
+  BriefcaseIcon,
   HomeIcon,
-  UsersIcon,
+  PaperAirplaneIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import clsx from "clsx";
@@ -21,13 +21,18 @@ const navigation = [
   {
     name: "Applications",
     href: "/dashboard/applications",
-    icon: UsersIcon,
+    icon: PaperAirplaneIcon,
     current: false,
   },
-  { name: "Jobs", href: "/dashboard/jobs", icon: FolderIcon, current: false },
-  { name: "Calendar", href: "#", icon: CalendarIcon, current: false },
-  { name: "Documents", href: "#", icon: DocumentDuplicateIcon, current: false },
-  { name: "Reports", href: "#", icon: ChartPieIcon, current: false },
+  {
+    name: "Jobs",
+    href: "/dashboard/jobs",
+    icon: BriefcaseIcon,
+    current: false,
+  },
+  // { name: "Calendar", href: "#", icon: CalendarIcon, current: false },
+  // { name: "Documents", href: "#", icon: DocumentDuplicateIcon, current: false },
+  // { name: "Reports", href: "#", icon: ChartPieIcon, current: false },
 ];
 
 export default function Dashboard({ children }) {
