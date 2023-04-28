@@ -33,7 +33,7 @@ const positions = [
 export default function AllJobs() {
   return (
     <>
-      <div class="flex flex-col mb-4 mx-1 md:flex-row md:flex-wrap">
+      <div className="flex flex-col mb-4 mx-1 md:flex-row md:flex-wrap">
         <div className="md:w-1/5 mb-2 md:mb-0 px-2">
           <label
             htmlFor="location"
